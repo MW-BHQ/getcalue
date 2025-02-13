@@ -6,7 +6,7 @@
     let cellData = {};
 
     function loadData(cells, webAppUrl) {
-      fetch(`webAppUrl?cells=${cells.join(',')}`)
+      fetch(`${webAppUrl}?cells=${cells.join(',')}`)
         .then(response => response.json())
         .then(data => {
           cellData = data;
